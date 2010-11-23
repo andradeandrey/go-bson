@@ -11,8 +11,12 @@ import (
 	"time"
 )
 
+type testDoc struct {
+	Test interface{} "test"
+}
+
 var bsonTests = []struct {
-	doc  map[string]interface{}
+	doc  interface{}
 	bson []byte
 }{
 	{nil, []byte("\x05\x00\x00\x00\x00")},
